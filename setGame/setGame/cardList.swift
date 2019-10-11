@@ -9,24 +9,26 @@
 import Foundation
 class cardList
 {
+    var temp = Card()
      var list:[Card]
     init()
     {
         list = [Card]()
         getCombination()
         list = list.shuffled()
+       
     }
    internal func getCombination()
      {
-        for color in cardColor.allValues
+        for color in temp.colorArray
         {
-            for number in cardNumber.allValues
+            for number in temp.numberArray
             {
-                for symbol in cardSymbol.allValue
+                for symbol in temp.symbolArray
                 {
-                    for shading in cardShade.allValues
+                    for shading in temp.shadeArray
                     {
-                        let card = Card(idNum: 0, cardColor:color,cardSymbol:symbol,cardNumber: number,cardShade: shading)
+                        let card = Card(color: color,number: number,symbol: symbol,shade: shading)
                         list.append(card)
                     }
                 }

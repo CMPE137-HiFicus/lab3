@@ -8,38 +8,56 @@
 
 import Foundation
 struct Card{
-    
-    
-    var idNum = 0
-    let cardColor:cardColor
-    let cardSymbol:cardSymbol
-    let cardNumber:cardNumber
-    let cardShade:cardShade
+ 
+    var cardColor:String
+    var cardSymbol:String
+    var cardNumber:String
+    var cardShade:String
+    init() {
+        cardColor = ""
+        cardNumber = ""
+        cardSymbol  = ""
+        cardShade = ""
+    }
+    init(color:String,number:String,symbol:String,shade:String) {
+        cardColor = color
+        cardNumber = number
+        cardSymbol = symbol
+        cardShade = shade
+    }
+    let colorArray = ["red","blue","green"]
+    let shadeArray = ["stripe","stroke","fill"]
+    let symbolArray = ["square","circle","triangle"]
+    let numberArray = ["one","two","three"]
 }
-    enum cardColor{
-        case red
-        case green
-        case blue
-        static let allValues = [red, green, blue]
-    }
-    enum cardSymbol{
-        case triangle
-        case circle
-        case square
-        static let allValue = [triangle,circle,square]
-    }
-    
-    enum cardNumber{
-        case one
-        case two
-        case three
-        static let allValues = [one,two,three]
-    }
-    
-    enum cardShade {
-        case solid
-        case striped
-        case open
-        static let allValues = [solid,striped,open]
-    }
+//    enum cardColor{
+//        case red
+//        case green
+//        case blue
+//        case b
+//        static var allValues = [red, green, blue]
+//    }
+//    enum cardSymbol{
+//        case triangle
+//        case circle
+//        case square
+//        case c
+//        static var allValue = [triangle,circle,square]
+//    }
+//    
+//    enum cardNumber{
+//        case one
+//        case two
+//        case three
+//        case d
+//        static var allValues = [one,two,three]
+//    }
+//    
+//    enum cardShade {
+//        case solid
+//        case striped
+//        case open
+//        case e
+//        static var allValues = [solid,striped,open]
+//    }
     

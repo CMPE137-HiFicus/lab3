@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9737CE67234AB0FE00F00BC2 /* cardList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9737CE66234AB0FE00F00BC2 /* cardList.swift */; };
+		97F79556234BEDE900BEF51F /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F79555234BEDE900BEF51F /* CollectionViewCell.swift */; };
 		97F808A123430A6800EBFC87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F808A023430A6800EBFC87 /* AppDelegate.swift */; };
 		97F808A323430A6800EBFC87 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F808A223430A6800EBFC87 /* SceneDelegate.swift */; };
 		97F808A523430A6800EBFC87 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F808A423430A6800EBFC87 /* ViewController.swift */; };
@@ -40,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		9737CE66234AB0FE00F00BC2 /* cardList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cardList.swift; sourceTree = "<group>"; };
+		97F79555234BEDE900BEF51F /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		97F8089D23430A6800EBFC87 /* setGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = setGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97F808A023430A6800EBFC87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		97F808A223430A6800EBFC87 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 			children = (
 				97F808D823430C9800EBFC87 /* viewSysbol.swift */,
 				97F808DA234316CC00EBFC87 /* cardView.swift */,
+				9737CE66234AB0FE00F00BC2 /* cardList.swift */,
 				97F8E01323495F4300AF5D5D /* Card.swift */,
 				97F808A023430A6800EBFC87 /* AppDelegate.swift */,
 				97F808A223430A6800EBFC87 /* SceneDelegate.swift */,
@@ -117,7 +120,7 @@
 				97F808A923430A6900EBFC87 /* Assets.xcassets */,
 				97F808AB23430A6900EBFC87 /* LaunchScreen.storyboard */,
 				97F808AE23430A6900EBFC87 /* Info.plist */,
-				9737CE66234AB0FE00F00BC2 /* cardList.swift */,
+				97F79555234BEDE900BEF51F /* CollectionViewCell.swift */,
 			);
 			path = setGame;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 			files = (
 				9737CE67234AB0FE00F00BC2 /* cardList.swift in Sources */,
 				97F808A523430A6800EBFC87 /* ViewController.swift in Sources */,
+				97F79556234BEDE900BEF51F /* CollectionViewCell.swift in Sources */,
 				97F8E01423495F4300AF5D5D /* Card.swift in Sources */,
 				97F808A123430A6800EBFC87 /* AppDelegate.swift in Sources */,
 				97F808D923430C9800EBFC87 /* viewSysbol.swift in Sources */,
