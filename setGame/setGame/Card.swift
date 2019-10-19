@@ -7,8 +7,13 @@
 //
 
 import Foundation
-struct Card{
- 
+struct Card:Equatable{
+    static func == (lh:Card , rh:Card) ->Bool		{
+        return lh.cardColor == rh.cardColor &&
+            lh.cardShade == rh.cardShade &&
+            lh.cardNumber == rh.cardNumber &&
+            lh.cardSymbol == rh.cardSymbol
+    }
     var cardColor:String
     var cardSymbol:String
     var cardNumber:String
@@ -30,34 +35,5 @@ struct Card{
     let symbolArray = ["square","circle","triangle"]
     let numberArray = ["one","two","three"]
 }
-//    enum cardColor{
-//        case red
-//        case green
-//        case blue
-//        case b
-//        static var allValues = [red, green, blue]
-//    }
-//    enum cardSymbol{
-//        case triangle
-//        case circle
-//        case square
-//        case c
-//        static var allValue = [triangle,circle,square]
-//    }
-//    
-//    enum cardNumber{
-//        case one
-//        case two
-//        case three
-//        case d
-//        static var allValues = [one,two,three]
-//    }
-//    
-//    enum cardShade {
-//        case solid
-//        case striped
-//        case open
-//        case e
-//        static var allValues = [solid,striped,open]
-//    }
+
     

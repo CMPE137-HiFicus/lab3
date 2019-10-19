@@ -15,7 +15,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="1Ew-l7-BVc">
+                            <stackView opaque="NO" contentMode="redraw" semanticContentAttribute="playback" axis="vertical" distribution="fillProportionally" alignment="bottom" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="1Ew-l7-BVc">
                                 <rect key="frame" x="20" y="44" width="372" height="574"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="PMl-yr-u3e">
@@ -24,18 +24,34 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rmp-I8-Alc">
                                                 <rect key="frame" x="0.0" y="0.0" width="75" height="89"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="7YB-Un-9Au" appends="YES" id="WSX-o7-f0h"/>
+                                                </connections>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R46-0E-Z9e">
                                                 <rect key="frame" x="99" y="0.0" width="75" height="89"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="PqW-3L-6hJ" appends="YES" id="Q49-bQ-F3r"/>
+                                                </connections>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dLr-lW-3NS">
                                                 <rect key="frame" x="198" y="0.0" width="75" height="89"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="YTL-ZA-hgC" appends="YES" id="wIc-gN-7ni"/>
+                                                </connections>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3bT-j0-7HX">
                                                 <rect key="frame" x="297" y="0.0" width="75" height="89"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="yRP-G7-eTC" appends="YES" id="f3p-SY-tSX"/>
+                                                </connections>
                                             </view>
                                         </subviews>
                                         <constraints>
@@ -63,18 +79,34 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A1u-I3-geD">
                                                 <rect key="frame" x="0.0" y="0.0" width="75" height="89"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="CfH-f0-XTc" appends="YES" id="luf-jF-xw8"/>
+                                                </connections>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XWj-FN-QEm">
                                                 <rect key="frame" x="99" y="0.0" width="75" height="89"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="FfF-Tb-iPT" appends="YES" id="Jg0-fN-qZn"/>
+                                                </connections>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TcY-yb-Nsn">
                                                 <rect key="frame" x="198" y="0.0" width="75" height="89"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="IE3-gn-nQk" appends="YES" id="OzI-HX-OX1"/>
+                                                </connections>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZNe-Pj-U2c">
                                                 <rect key="frame" x="297" y="0.0" width="75" height="89"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="ohJ-89-NCD" appends="YES" id="JfW-Wb-eB8"/>
+                                                </connections>
                                             </view>
                                         </subviews>
                                         <constraints>
@@ -102,18 +134,34 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ipb-pK-Ug2">
                                                 <rect key="frame" x="0.0" y="0.0" width="75" height="89"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="G7y-zf-phj" appends="YES" id="Imx-i5-XAh"/>
+                                                </connections>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="26x-Fb-qLL">
                                                 <rect key="frame" x="99" y="0.0" width="75" height="89"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="7No-15-Ev5" appends="YES" id="6WC-mA-Cp2"/>
+                                                </connections>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1aL-KL-84m">
                                                 <rect key="frame" x="198" y="0.0" width="75" height="89"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="UOk-rC-ep5" appends="YES" id="IIG-0a-0g0"/>
+                                                </connections>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9fu-0d-8CU">
                                                 <rect key="frame" x="297" y="0.0" width="75" height="89"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="XGO-Xr-pbV" appends="YES" id="z5v-aq-Y2i"/>
+                                                </connections>
                                             </view>
                                         </subviews>
                                         <constraints>
@@ -141,18 +189,34 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VZZ-ud-cgt">
                                                 <rect key="frame" x="0.0" y="0.0" width="75" height="89"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="hVj-c3-DNc" appends="YES" id="lZ8-dO-Ihk"/>
+                                                </connections>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oBJ-qt-nyi">
                                                 <rect key="frame" x="99" y="0.0" width="75" height="89"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="SfP-KZ-RW5" appends="YES" id="d4l-Qb-CUv"/>
+                                                </connections>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="axO-Da-Yau">
                                                 <rect key="frame" x="198" y="0.0" width="75" height="89"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="Gs0-a0-ZOi" appends="YES" id="Pjy-or-RAB"/>
+                                                </connections>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1cV-CT-477">
                                                 <rect key="frame" x="297" y="0.0" width="75" height="89"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="S8l-eI-B2N" appends="YES" id="mht-Mc-ZuW"/>
+                                                </connections>
                                             </view>
                                         </subviews>
                                         <constraints>
@@ -180,18 +244,34 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ufz-V6-uGi">
                                                 <rect key="frame" x="0.0" y="0.0" width="75" height="89"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="GUe-eA-hVz" appends="YES" id="CiL-CJ-HCd"/>
+                                                </connections>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="exi-rC-e2q">
                                                 <rect key="frame" x="99" y="0.0" width="75" height="89"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="bQD-yT-kKF" appends="YES" id="Os9-2f-Fbz"/>
+                                                </connections>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xHG-vr-RY3">
                                                 <rect key="frame" x="198" y="0.0" width="75" height="89"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="Grl-gs-8bY" appends="YES" id="6xu-7t-TCZ"/>
+                                                </connections>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h6D-z1-W1X">
                                                 <rect key="frame" x="297" y="0.0" width="75" height="89"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="k1L-Rx-D1O" appends="YES" id="NYG-Hv-pPl"/>
+                                                </connections>
                                             </view>
                                         </subviews>
                                         <constraints>
@@ -219,18 +299,34 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dZj-oF-YfU">
                                                 <rect key="frame" x="0.0" y="0.0" width="75" height="89"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="aX6-ka-dg1" appends="YES" id="QGX-CS-YvP"/>
+                                                </connections>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NGY-QB-xZB">
                                                 <rect key="frame" x="99" y="0.0" width="75" height="89"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="Vji-bW-GhA" appends="YES" id="2lF-Ic-y8h"/>
+                                                </connections>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9AK-3I-LzY">
                                                 <rect key="frame" x="198" y="0.0" width="75" height="89"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="GEY-pa-h8T" appends="YES" id="LJ1-rs-LJ8"/>
+                                                </connections>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Z8-VZ-1Xu">
                                                 <rect key="frame" x="297" y="0.0" width="75" height="89"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="KoO-gz-wlH" appends="YES" id="Luh-3p-dc0"/>
+                                                </connections>
                                             </view>
                                         </subviews>
                                         <constraints>
@@ -258,7 +354,6 @@
                                     <constraint firstItem="jLI-RH-Y7L" firstAttribute="leading" secondItem="1Ew-l7-BVc" secondAttribute="leading" id="4b6-bt-DCR"/>
                                     <constraint firstAttribute="bottom" secondItem="9ZR-Xh-Hbe" secondAttribute="bottom" constant="291" id="7nt-cv-AjX"/>
                                     <constraint firstItem="7cj-pp-S8N" firstAttribute="top" secondItem="1Ew-l7-BVc" secondAttribute="top" constant="485" id="ADu-3O-o3o"/>
-                                    <constraint firstAttribute="width" secondItem="1Ew-l7-BVc" secondAttribute="height" multiplier="186:287" id="CK7-fp-Ao5"/>
                                     <constraint firstAttribute="bottom" secondItem="PMl-yr-u3e" secondAttribute="bottom" constant="485" id="EJY-cj-H7I"/>
                                     <constraint firstAttribute="trailing" secondItem="b87-sF-7z7" secondAttribute="trailing" id="KWM-7d-ccA"/>
                                     <constraint firstItem="b87-sF-7z7" firstAttribute="top" secondItem="1Ew-l7-BVc" secondAttribute="top" constant="291" id="Kam-DS-nfv"/>
@@ -291,14 +386,26 @@
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="startSetGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HQx-N5-pKI"/>
+                                    <action selector="startSetGameWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="osb-kb-ESD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cuu-T9-bU3">
+                                <rect key="frame" x="20" y="704" width="374" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="Add 3 more">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="addViews:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8X3-Y1-qUd"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="1Ew-l7-BVc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="2fV-IT-A4g"/>
+                            <constraint firstItem="1Ew-l7-BVc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Iyt-H3-j83"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1Ew-l7-BVc" secondAttribute="bottom" constant="244" id="haM-XW-hot"/>
                             <constraint firstItem="1Ew-l7-BVc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ibF-qp-YKF"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1Ew-l7-BVc" secondAttribute="trailing" constant="22" id="pVi-4E-gmf"/>
@@ -333,7 +440,126 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="sAe-lB-RLJ"/>
+                <tapGestureRecognizer id="7YB-Un-9Au">
+                    <connections>
+                        <action selector="handleTap:" destination="BYZ-38-t0r" id="oJE-JA-nSR"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="PqW-3L-6hJ">
+                    <connections>
+                        <action selector="handleTap:" destination="BYZ-38-t0r" id="IVW-54-pKm"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="YTL-ZA-hgC">
+                    <connections>
+                        <action selector="handleTap:" destination="BYZ-38-t0r" id="CFq-Sv-1Gz"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="yRP-G7-eTC">
+                    <connections>
+                        <action selector="handleTap:" destination="BYZ-38-t0r" id="bjE-8S-976"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="CfH-f0-XTc">
+                    <connections>
+                        <action selector="handleTap:" destination="BYZ-38-t0r" id="RAr-kR-hZ8"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="FfF-Tb-iPT">
+                    <connections>
+                        <action selector="handleTap:" destination="BYZ-38-t0r" id="e9z-1R-zfW"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="IE3-gn-nQk">
+                    <connections>
+                        <action selector="handleTap:" destination="BYZ-38-t0r" id="kJQ-Ae-L4Q"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="ohJ-89-NCD">
+                    <connections>
+                        <action selector="handleTap:" destination="BYZ-38-t0r" id="tPX-EP-yfC"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="G7y-zf-phj">
+                    <connections>
+                        <action selector="handleTap:" destination="BYZ-38-t0r" id="XdN-J1-AHE"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="7No-15-Ev5">
+                    <connections>
+                        <action selector="handleTap:" destination="BYZ-38-t0r" id="G1Z-zE-XB9"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="UOk-rC-ep5">
+                    <connections>
+                        <action selector="handleTap:" destination="BYZ-38-t0r" id="Ifk-AC-Emy"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="XGO-Xr-pbV">
+                    <connections>
+                        <action selector="handleTap:" destination="BYZ-38-t0r" id="Lf0-eg-zpW"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="hVj-c3-DNc">
+                    <connections>
+                        <action selector="handleTap:" destination="BYZ-38-t0r" id="jsr-aL-iwK"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="SfP-KZ-RW5">
+                    <connections>
+                        <action selector="handleTap:" destination="BYZ-38-t0r" id="7eK-5h-7yb"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Gs0-a0-ZOi">
+                    <connections>
+                        <action selector="handleTap:" destination="BYZ-38-t0r" id="eef-lS-uxp"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="S8l-eI-B2N">
+                    <connections>
+                        <action selector="handleTap:" destination="BYZ-38-t0r" id="tte-1y-t5m"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="GUe-eA-hVz">
+                    <connections>
+                        <action selector="handleTap:" destination="BYZ-38-t0r" id="iA0-SQ-eMu"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="bQD-yT-kKF">
+                    <connections>
+                        <action selector="handleTap:" destination="BYZ-38-t0r" id="LuN-jo-dqY"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Grl-gs-8bY">
+                    <connections>
+                        <action selector="handleTap:" destination="BYZ-38-t0r" id="bmx-fE-5hZ"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="k1L-Rx-D1O">
+                    <connections>
+                        <action selector="handleTap:" destination="BYZ-38-t0r" id="e01-H3-skq"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="aX6-ka-dg1">
+                    <connections>
+                        <action selector="handleTap:" destination="BYZ-38-t0r" id="MEw-p3-t65"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Vji-bW-GhA">
+                    <connections>
+                        <action selector="handleTap:" destination="BYZ-38-t0r" id="JEd-jc-9d5"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="KoO-gz-wlH">
+                    <connections>
+                        <action selector="handleTap:" destination="BYZ-38-t0r" id="kLc-oe-0PP"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="GEY-pa-h8T">
+                    <connections>
+                        <action selector="handleTap:" destination="BYZ-38-t0r" id="UBI-f4-3gN"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="75.362318840579718" y="129.91071428571428"/>
         </scene>

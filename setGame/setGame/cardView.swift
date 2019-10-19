@@ -15,6 +15,8 @@ class cardView: UIView {
 //    var cards = cardList()
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
+
+
     override init(frame: CGRect) {
         super.init(frame:frame)
         
@@ -26,14 +28,16 @@ class cardView: UIView {
     }
     
     override func draw(_ rect: CGRect) {
-        
         drawCard(of: card1)
     }
     
     func getDraw(of card:Card){
         card1 = card
+       
     }
   
+  
+   
     func getPoint(number:Int) -> CGRect{
         switch number {
         case 1:
@@ -123,7 +127,7 @@ class cardView: UIView {
     
     }
     func stripe(of : CIColor){
-        path.lineWidth = 3
+        path.lineWidth = 2
         for  num in stride(from: 0, through: Int(self.frame.height), by: 5){
             path.move(to: CGPoint(x: 0, y: num))
             path.addLine(to: CGPoint(x: Int(self.frame.width), y: num))
