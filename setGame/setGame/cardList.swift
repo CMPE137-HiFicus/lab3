@@ -9,14 +9,14 @@
 import Foundation
 class cardList
 {
-    var temp = Card()
+     var temp = Card()
      var list:[Card]
     init()
     {
         list = [Card]()
         getCombination()
         list = list.shuffled()
-       
+        
     }
    internal func getCombination()
      {
@@ -36,32 +36,31 @@ class cardList
         }
       }
     func sameColor(set: [Card])-> Bool{
-        if (set[0].cardColor == set[1].cardColor && set[0].cardColor == set[2].cardColor && set[1].cardColor == set[2].cardColor) { return true}
+        if (set[0].cardColor == set[1].cardColor && set[0].cardColor == set[2].cardColor ) { return true}
         else {return false}
     }
     
     func sametShade(set:[Card]) -> Bool {
-        if (set[0].cardShade == set[1].cardShade && set[0].cardShade == set[2].cardShade && set[1].cardShade == set[2].cardShade) { return true}
+        if (set[0].cardShade == set[1].cardShade && set[0].cardShade == set[2].cardShade) { return true}
         else {return false}
     }
     
     func sameNumber(set: [Card])-> Bool {
-        if (set[0].cardNumber == set[1].cardNumber && set[0].cardNumber == set[2].cardNumber && set[1].cardNumber == set[2].cardNumber) { return true}
+        if (set[0].cardNumber == set[1].cardNumber && set[0].cardNumber == set[2].cardNumber) { return true}
             
         else {return false}
     }
     
     func sameSymbol(set: [Card]) -> Bool {
-        if (set[0].cardSymbol == set[1].cardSymbol && set[0].cardSymbol == set[2].cardSymbol && set[1].cardSymbol == set[2].cardSymbol){ return true}
+        if (set[0].cardSymbol == set[1].cardSymbol && set[0].cardSymbol == set[2].cardSymbol){ return true}
             
         else {return false}
     }
     
     func isSet(set:[Card]) -> Bool {
-        if (!sameColor(set: set) && !sameNumber(set: set) && !sametShade(set: set) && !sameSymbol(set: set)) {return true}
-//        else if (sameNumber(set: set) && !sameColor(set: set) && !sametShade(set: set) && !sameSymbol(set: set)) {return true}
-//        else if (!sameNumber(set: set) && !sameColor(set: set) && !sametShade(set: set) && sameSymbol(set: set)) {return true}
-        
+        if (sameColor(set: set) && sameNumber(set: set) && !sametShade(set: set) && sameSymbol(set: set)) {return true}
+        else if (!sameNumber(set: set) && !sameColor(set: set) && sametShade(set: set) && !sameSymbol(set: set)) {return true}
+       else if (!sameNumber(set: set) && !sameColor(set: set) && !sametShade(set: set) && !sameSymbol(set: set)) {return true}
         else { return false}
     }
     

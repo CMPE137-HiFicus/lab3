@@ -11,50 +11,55 @@ import UIKit
 class ViewController: UIViewController {
     private var startButton = true
     private var resize = true
-    private var pointer = 0
+    private let innitCard = Card()
+    
     private var listOfCards = Array(repeating: Card(), count: 24)
     private var listOfAppearCard:[Card] = []
     var cards = cardList()
     @IBOutlet var views: [UIView]!
     
-  
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
     }
     
-    func checkIntersect(view: UIView) -> Bool {
-        let index = views.firstIndex(of: view)
-        if view.bounds.contains(CGPoint(x: views[index!-1].bounds.maxX, y: views[index!-1].bounds.maxY)){
-            
-        }
-        return false
-    }
+    
+    private func isSet()  {
+        for card in listOfAppearCard{
+          let index = Int?(listOfCards.firstIndex(of: card)!)!
+            listOfCards[index] = Card()
+            if !views[index].subviews.isEmpty{
+                views[index].subviews[0].removeFromSuperview()}
+            views[index].backgroundColor = UIColor.white
+            views[index].isOpaque = true
+        }}
     
     @IBAction func startSetGame(sender: Any) {
         var count = 0
         if startButton == true{
         while count<12{
-            
             let card = views.random()
+            if card.subviews.isEmpty{
             if card.isOpaque != false{
                 card.transform = CGAffineTransform(scaleX: CGFloat(1.2), y: CGFloat(1.2))
-                var cardsubView = cardView(frame:CGRect(x: card.bounds.width/25, y:card.bounds.height/25, width: card.bounds.width-5, height: card.bounds.height-5))
+               let cardsubView = cardView(frame:CGRect(x: card.bounds.width/25, y:card.bounds.height/25, width: card.bounds.width-5, height: card.bounds.height-5))
                 cardsubView.getDraw(of: cards.getCard(index: 0))
                 listOfCards[Int?(views.firstIndex(of: card)!)!] = cards.getCard(index: 0)
                 cards.deleteCard(index: 0)
                 card.addSubview(cardsubView)
                 card.isOpaque = false
                 count += 1
-               
+                }
             }
         }
         startButton = false
     }
 }
+    
     func chooseCard(sender:UITapGestureRecognizer){
+       
         let temp = listOfCards[Int?(views.firstIndex(of: sender.view!)!)!]
+        if listOfAppearCard.count != 3{
         if sender.view!.isOpaque == false{
             if sender.view!.backgroundColor !== UIColor.blue{
                 sender.view!.backgroundColor = UIColor.blue
@@ -64,23 +69,38 @@ class ViewController: UIViewController {
             else {
                 sender.view!.backgroundColor = UIColor.white
                 listOfAppearCard.remove(at:  Int?(listOfAppearCard.firstIndex(of: temp)!)!)
-               
+            }
+        }
+        }else {
+            if cards.isSet(set: listOfAppearCard) == true{
+                isSet()
+                listOfAppearCard.removeAll()
+            }
+            else {
+                for card in listOfAppearCard{
+                    let index = Int?(listOfCards.firstIndex(of: card)!)!
+                    views[index].backgroundColor = UIColor.white
+                }
+                listOfAppearCard.removeAll()
             }
         }
     }
-
+    
     @IBAction func handleTap(_ sender: UITapGestureRecognizer) {
+        if cards.list.count != 0 {
         chooseCard(sender: sender)
-       
-        print(Int?(listOfAppearCard.count)!)
-       
-}
+//        print(listOfCards[Int?(views.firstIndex(of: sender.view!)!)!].cardColor)
+//        print(listOfCards[Int?(views.firstIndex(of: sender.view!)!)!].cardShade)
+//        print(listOfCards[Int?(views.firstIndex(of: sender.view!)!)!].cardNumber)
+//        print(listOfCards[Int?(views.firstIndex(of: sender.view!)!)!].cardSymbol)
+        }}
     func add3More(){
         var count = 0
          while count<3{
                    let card = views.random()
+               if card.subviews.isEmpty{
                    if card.isOpaque != false{
-                       var cardsubView = cardView(frame:CGRect(x: card.bounds.width/25, y:card.bounds.height/25, width: card.bounds.width-5, height: card.bounds.height-5))
+                    let cardsubView = cardView(frame:CGRect(x: card.bounds.width/25, y:card.bounds.height/25, width: card.bounds.width-5, height: card.bounds.height-5))
                        cardsubView.getDraw(of: cards.getCard(index: 0))
                     listOfCards[Int(views.firstIndex(of: card)!)] = cards.getCard(index: 0)
                     cards.deleteCard(index: 0)
@@ -90,6 +110,7 @@ class ViewController: UIViewController {
                    
                    }
                }
+        }
     }
     @IBAction func addViews(_ sender: Any) {
         if resize == true{
@@ -113,5 +134,6 @@ extension Array{
         return self[Int(arc4random_uniform(UInt32(self.count)))]
     }
 }
+
 
 

@@ -40,6 +40,8 @@ class cardView: UIView {
    
     func getPoint(number:Int) -> CGRect{
         switch number {
+        case 0:
+            return CGRect(x:self.frame.width/4+(self.frame.width/4)/2, y:self.frame.height/4+(self.frame.height/4)/2, width:self.frame.width/3, height:self.frame.width/3)
         case 1:
             return CGRect(x: self.frame.width/4+(self.frame.width/4)/2, y: self.frame.height/6 - 20 + self.frame.height/6, width:  self.frame.width/3, height: self.frame.width/3)
         case 2:
@@ -47,7 +49,7 @@ class cardView: UIView {
         case 3:
              return CGRect(x: self.frame.width/4+self.frame.width/4+10, y: self.frame.height/2 - 30 + self.frame.height/6, width:  self.frame.width/3, height: self.frame.width/3)
         default:
-            return CGRect(x:self.frame.width/4+(self.frame.width/4)/2, y:self.frame.height/4+(self.frame.height/4)/2, width:self.frame.width/3, height:self.frame.width/3)
+            return CGRect(x:0, y:0, width:self.frame.width, height:self.frame.height)
         }}
 
     func getSymbol(of card:Card, point:CGRect){
@@ -59,7 +61,7 @@ class cardView: UIView {
         case "circle":
                 circle(point: point)
             default:
-                print("nil")
+                square(point: point)
             }
         }
     func getColor(of card:Card)-> CIColor{
@@ -71,7 +73,7 @@ class cardView: UIView {
         case "green":
             return CIColor.green
         default:
-            return CIColor.gray
+            return CIColor.white
         }
     }
     func getShade(of card:Card){
@@ -84,7 +86,7 @@ class cardView: UIView {
         case "fill":
             fillColor(of: getColor(of: card))
         default:
-            print("nil")
+            fillColor(of: getColor(of: card))
         }
     }
 
@@ -103,7 +105,8 @@ class cardView: UIView {
             getSymbol(of: card, point: getPoint(number: 3))
             getShade(of: card)
         default:
-            print("nil")
+            getSymbol(of: card, point: getPoint(number: 4))
+             getShade(of: card)
         }
     }
     func square(point: CGRect){
