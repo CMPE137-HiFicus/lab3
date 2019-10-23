@@ -9,13 +9,13 @@
 import UIKit
 
 class ViewController: UIViewController {
+    private var isfull = 0
     private var startButton = true
     private var resize = true
-    private let innitCard = Card()
-    
+    private var initCard = Card()
     private var listOfCards = Array(repeating: Card(), count: 24)
     private var listOfAppearCard:[Card] = []
-    var cards = cardList()
+    private var cards = cardList()
     @IBOutlet var views: [UIView]!
     
     override func viewDidLoad() {
@@ -32,7 +32,9 @@ class ViewController: UIViewController {
                 views[index].subviews[0].removeFromSuperview()}
             views[index].backgroundColor = UIColor.white
             views[index].isOpaque = true
-        }}
+        }
+        isfull -= 3
+    }
     
     @IBAction func startSetGame(sender: Any) {
         var count = 0
@@ -50,12 +52,33 @@ class ViewController: UIViewController {
                 card.isOpaque = false
                 count += 1
                 }
+                isfull += 1
             }
+            
         }
         startButton = false
     }
 }
     
+    @IBAction func reStart(_ sender: Any) {
+        cards = cardList()
+        listOfCards.removeAll()
+        for _ in 0 ... 23{
+            listOfCards.append(initCard)
+        }
+        listOfAppearCard.removeAll()
+        for card in views{
+            if !card.subviews.isEmpty{
+            card.subviews[0].removeFromSuperview()
+            }
+            if card.isOpaque == false{
+                    card.isOpaque = true}
+        }
+        resize = true
+        isfull = 0
+        startButton = true
+       
+    }
     func chooseCard(sender:UITapGestureRecognizer){
        
         let temp = listOfCards[Int?(views.firstIndex(of: sender.view!)!)!]
@@ -96,6 +119,7 @@ class ViewController: UIViewController {
         }}
     func add3More(){
         var count = 0
+        if isfull < 24 {
          while count<3{
                    let card = views.random()
                if card.subviews.isEmpty{
@@ -107,10 +131,14 @@ class ViewController: UIViewController {
                        card.addSubview(cardsubView)
                        card.isOpaque = false
                        count += 1
-                   
                    }
+                 isfull += 1
                }
+               else { print("")}
+           
         }
+        }
+        
     }
     @IBAction func addViews(_ sender: Any) {
         if resize == true{
